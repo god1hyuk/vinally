@@ -225,14 +225,13 @@ body {
 ==================================================*/
 
 header {
+    position: relative;
     text-align: center;
     -webkit-transition: all .5s;
     transition: all .5s;
     height: 65px;
 }
-
 nav ul {
-    display: inline-block;
     padding-left: 0;
     list-style: none;
     padding: 20px;
@@ -240,12 +239,9 @@ nav ul {
     -webkit-transition: all .5s;
     transition: all .5s;
 }
-
 nav li {
-    display: inline-block;
-    margin: 10px;
+    margin: 10px 0;
 }
-
 nav li a {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -253,6 +249,60 @@ nav li a {
     font-size: 11px;
     font-weight: bold;
 }
+.menu {
+    display: flex;
+    justify-content: center;
+}
+.menu > li {
+    margin: 10px 3%;
+    text-align: center;
+}
+.menu > li > a {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.submenu {
+    padding-top: 10px;
+    display: none;
+}
+.submenu > li {
+    color: #444;
+}
+.submenu > li > a {
+    /* padding: 20px 0; */
+    text-align: center;
+}
+.dropdown-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.sm-bg {
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    border-bottom: 1px solid #f3f3f3;
+    z-index: -1;
+    /* display: none; */
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: none;
+}
+.dropdown-item:hover {
+    background: none;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+ 
 
 .bg-nav {
     background: #fff;
@@ -281,7 +331,7 @@ a.active {
 /* home section
 ==================================================*/
 
-#home {
+#home-top {
     position: relative;
     background: url(../images/home-bg.jpg);
     background-size: cover;
@@ -298,6 +348,7 @@ a.active {
 }
 .logo_white {
     width: 30%;
+    margin-top: 20px;
 }
 
 .disply-table {
@@ -307,20 +358,21 @@ a.active {
 #home-vinyl {
     position: absolute;
     right: 10%;
-    bottom: 10%;
+    bottom: 12%;
     width: 200px;
     height: 200px;
-    animation: hv-translate 2s ease-in-out;
+    animation: hv-translation 2s ease-in-out;
 }
-@keyframes hv-translate {
+@keyframes hv-translation {
     from {transform: translateX(500px);}
     to {transform: translateX(0);}
 }
-#home-vinyl > img {
+#home-vinyl img {
     width: 200px;
-    animation: hv-rotate 2s ease-in-out;
+    opacity: 95%;
+    animation: hv-rotation 2s ease-in-out;
 }
-@keyframes hv-rotate {
+@keyframes hv-rotation {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(-360deg);}
 }
@@ -334,20 +386,30 @@ a.active {
 #about {
     padding: 100px 0;
 }
+.about-title {
+    font-size: 4.8rem;
+    line-height: 1.2;
+}
 
 .about-img-div img {
     margin: 0 auto;
 }
 
-.about-border {
+.spin-txt {
     position: absolute;
-    border: 10px solid #4879bc;
-    /* border-radius: 500px; */
-    width: 400px;
-    height: 400px;
-    top: 60px;
-    left: 60px;
-    z-index: 1
+    top: 50px;
+    left: 12%;
+    width: 550px;
+    height: 550px;
+    z-index: 1;
+}
+.spin-txt > img{
+    width: 100%;
+    animation: spin-txt 15s linear infinite;
+}
+@keyframes spin-txt {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
 }
 
 
@@ -356,8 +418,28 @@ a.active {
 
 #experience {
     padding: 100px 0;
-    background: #f3f3f3
+    background: #f3f3f3;
+    /* overflow-y: hidden; */
 }
+
+.swiper-container {
+    width: 100%;
+    /* height: 100%; */
+    height: 850px;
+    overflow-y: hidden;
+}
+
+
+
+
+
+/* .experience_title_wrap {
+    display: flex;
+}
+.fa-angle-double-right {
+    font-size: 4rem;
+    line-height: 100px;
+} */
 
 .experience-row {
     padding: 20px 0;
