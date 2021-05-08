@@ -117,17 +117,6 @@ $(document).ready(function () {
 
     });
 
-    // news slider (swiper)
-    const swiper = new Swiper('.swiper-container', {
-        direction: "vertical",
-        speed: 800,
-        spaceBetween: 100,
-        loop: true,
-        autoplay: {
-            delay: 8000,
-            disableOnInteraction: false,
-        },
-      });
 
 
 
@@ -190,4 +179,282 @@ $(document).ready(function () {
         });
 
     });
+});
+
+
+
+
+// vp-01 animation
+
+
+// vp-01 slider
+
+// $('.vp-01_slider').slick({
+//     infinite: true,
+//     slidesToShow: 3,
+//     slidesToScroll: 3
+//   });
+
+  $('.vp-01_slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: '<i class="fas fa-caret-left"></i>',
+    nextArrow: '<i class="fas fa-caret-right"></i>',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 375,
+        settings: {
+          arrows: false,
+          slidesToShow: 3
+        }
+      }
+    ]
+  });
+
+// album covers
+
+$(function(){
+
+    $('#vinyl1').click(function () {
+        $('#vinyl1').css('filter','none');
+        $('#vinyl2').css('filter','grayscale(100%)');
+        $('#vinyl3').css('filter','grayscale(100%)');
+        $('#vinyl4').css('filter','grayscale(100%)');
+        $('#vinyl5').css('filter','grayscale(100%)');
+        $('#vinyl6').css('filter','grayscale(100%)');
+        $('#vinyl7').css('filter','grayscale(100%)');
+        $('#vinyl8').css('filter','grayscale(100%)');
+        $('#vinyl9').css('filter','grayscale(100%)');
+    });
+
+    $('#vinyl2').click(function () {
+        $('#vinyl2').css('filter','none');
+        $('#vinyl1').css('filter','grayscale(100%)');
+        $('#vinyl3').css('filter','grayscale(100%)');
+        $('#vinyl4').css('filter','grayscale(100%)');
+        $('#vinyl5').css('filter','grayscale(100%)');
+        $('#vinyl6').css('filter','grayscale(100%)');
+        $('#vinyl7').css('filter','grayscale(100%)');
+        $('#vinyl8').css('filter','grayscale(100%)');
+        $('#vinyl9').css('filter','grayscale(100%)');
+    });
+
+    $('#vinyl3').click(function () {
+        $('#vinyl3').css('filter','none');
+        $('#vinyl1').css('filter','grayscale(100%)');
+        $('#vinyl2').css('filter','grayscale(100%)');
+        $('#vinyl4').css('filter','grayscale(100%)');
+        $('#vinyl5').css('filter','grayscale(100%)');
+        $('#vinyl6').css('filter','grayscale(100%)');
+        $('#vinyl7').css('filter','grayscale(100%)');
+        $('#vinyl8').css('filter','grayscale(100%)');
+        $('#vinyl9').css('filter','grayscale(100%)');
+    });
+
+    $('#vinyl4').click(function () {
+        $('#vinyl4').css('filter','none');
+        $('#vinyl1').css('filter','grayscale(100%)');
+        $('#vinyl2').css('filter','grayscale(100%)');
+        $('#vinyl3').css('filter','grayscale(100%)');
+        $('#vinyl5').css('filter','grayscale(100%)');
+        $('#vinyl6').css('filter','grayscale(100%)');
+        $('#vinyl7').css('filter','grayscale(100%)');
+        $('#vinyl8').css('filter','grayscale(100%)');
+        $('#vinyl9').css('filter','grayscale(100%)');
+    });
+
+    $('#vinyl5').click(function () {
+        $('#vinyl5').css('filter','none');
+        $('#vinyl1').css('filter','grayscale(100%)');
+        $('#vinyl2').css('filter','grayscale(100%)');
+        $('#vinyl3').css('filter','grayscale(100%)');
+        $('#vinyl4').css('filter','grayscale(100%)');
+        $('#vinyl6').css('filter','grayscale(100%)');
+        $('#vinyl7').css('filter','grayscale(100%)');
+        $('#vinyl8').css('filter','grayscale(100%)');
+        $('#vinyl9').css('filter','grayscale(100%)');
+    });
+
+    $('#vinyl6').click(function () {
+        $('#vinyl6').css('filter','none');
+        $('#vinyl1').css('filter','grayscale(100%)');
+        $('#vinyl2').css('filter','grayscale(100%)');
+        $('#vinyl3').css('filter','grayscale(100%)');
+        $('#vinyl4').css('filter','grayscale(100%)');
+        $('#vinyl5').css('filter','grayscale(100%)');
+        $('#vinyl7').css('filter','grayscale(100%)');
+        $('#vinyl8').css('filter','grayscale(100%)');
+        $('#vinyl9').css('filter','grayscale(100%)');
+    });
+
+    $('#vinyl7').click(function () {
+        $('#vinyl7').css('filter','none');
+        $('#vinyl1').css('filter','grayscale(100%)');
+        $('#vinyl2').css('filter','grayscale(100%)');
+        $('#vinyl3').css('filter','grayscale(100%)');
+        $('#vinyl4').css('filter','grayscale(100%)');
+        $('#vinyl5').css('filter','grayscale(100%)');
+        $('#vinyl6').css('filter','grayscale(100%)');
+        $('#vinyl8').css('filter','grayscale(100%)');
+        $('#vinyl9').css('filter','grayscale(100%)');
+    });
+
+    $('#vinyl8').click(function () {
+        $('#vinyl8').css('filter','none');
+        $('#vinyl1').css('filter','grayscale(100%)');
+        $('#vinyl2').css('filter','grayscale(100%)');
+        $('#vinyl3').css('filter','grayscale(100%)');
+        $('#vinyl4').css('filter','grayscale(100%)');
+        $('#vinyl5').css('filter','grayscale(100%)');
+        $('#vinyl6').css('filter','grayscale(100%)');
+        $('#vinyl7').css('filter','grayscale(100%)');
+        $('#vinyl9').css('filter','grayscale(100%)');
+    });
+
+    $('#vinyl9').click(function () {
+        $('#vinyl9').css('filter','none');
+        $('#vinyl1').css('filter','grayscale(100%)');
+        $('#vinyl2').css('filter','grayscale(100%)');
+        $('#vinyl3').css('filter','grayscale(100%)');
+        $('#vinyl4').css('filter','grayscale(100%)');
+        $('#vinyl5').css('filter','grayscale(100%)');
+        $('#vinyl6').css('filter','grayscale(100%)');
+        $('#vinyl7').css('filter','grayscale(100%)');
+        $('#vinyl8').css('filter','grayscale(100%)');
+    })
+});
+
+
+// vp-01 play
+
+let switchCount = 0;
+
+$(function () {
+    $('.vp-01_play').click(function () {
+        if (switchCount % 2 === 0) {
+            $(this).text('STOP');
+            $('.vp-01_wrap').stop().css('filter','grayscale(0%)').css('transition','filter 0.2s ease');
+            $('.vp-01_switch').stop().animate({
+                top: '-45'
+            }, 1000);
+            $('.vp-01_cap').stop().animate({
+                left: '90'
+            }, 1000);
+            setTimeout(function() {
+                $('.vp-01_spindle').stop().css('animation-play-state','running');
+            }, 500);
+        } else {
+            $(this).text('PLAY');
+            $('.vp-01_wrap').stop().css('filter','grayscale(100%)').css('transition','filter 0.2s ease');
+            $('.vp-01_switch').stop().animate({
+            top: '0'
+            }, 1000);
+            $('.vp-01_cap').stop().animate({
+                left: '0'
+            }, 1000);
+            $('.vp-01_spindle').stop().css('animation-play-state','paused');
+        }
+        switchCount++;
+    });
+
+    $('.vp-01_play').mouseover(function () {
+        $('.vp-01_wrap').stop().css('filter','grayscale(0%)').css('transition','filter 0.2s ease');
+    });
+    $('.vp-01_play').mouseout(function () {
+        if (switchCount % 2 === 0) {
+            $('.vp-01_wrap').stop().css('filter','grayscale(100%)').css('transition','filter 0.2s ease');
+        } else {
+            $('.vp-01_wrap').stop().css('filter','grayscale(0%)').css('transition','filter 0.2s ease');
+        }
+    });
+
+});
+
+const audioContainer = document.querySelector('#audioContainer');
+const playBtn = document.querySelector('.vp-01_play');
+const album1 = document.querySelector('#vinyl1');
+const album2 = document.querySelector('#vinyl2');
+const album3 = document.querySelector('#vinyl3');
+const album4 = document.querySelector('#vinyl4');
+const album5 = document.querySelector('#vinyl5');
+const album6 = document.querySelector('#vinyl6');
+const album7 = document.querySelector('#vinyl7');
+const album8 = document.querySelector('#vinyl8');
+const album9 = document.querySelector('#vinyl9');
+
+
+let currentAudio;
+
+album1.addEventListener('click', function () {
+    currentAudio = 1;
+});
+
+album2.addEventListener('click', function () {
+    currentAudio = 2;
+});
+
+album3.addEventListener('click', function () {
+    currentAudio = 3;
+});
+
+album4.addEventListener('click', function () {
+    currentAudio = 4;
+});
+
+album5.addEventListener('click', function () {
+    currentAudio = 5;
+});
+
+album6.addEventListener('click', function () {
+    currentAudio = 6;
+});
+
+album7.addEventListener('click', function () {
+    currentAudio = 7;
+});
+
+album8.addEventListener('click', function () {
+    currentAudio = 8;
+});
+
+album9.addEventListener('click', function () {
+    currentAudio = 9;
+});
+
+
+function playAudio () {
+    audioContainer.volume = 0.5;
+    audioContainer.play();
+}
+
+function stopAudio () {
+    audioContainer.pause();
+}
+
+function loadAudio () {
+    const source = document.querySelector('#audioSource');
+    source.src = `audio/${currentAudio}.mp3`;
+    audioContainer.load();
+    playAudio();
+    console.log(source.src);
+}
+
+let playCount = 0;
+
+playBtn.addEventListener('click', function () {
+    if (playCount % 2 === 0) {
+        loadAudio();
+    } else {
+        stopAudio();
+    }
+    playCount++;
+    console.log(playCount);
 });
