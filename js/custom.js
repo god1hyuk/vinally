@@ -52,31 +52,7 @@ $(document).ready(function () {
 
         return false;
     });
-
-
-    // Menu opacity
-    if ($(window).scrollTop() > 80) {
-        $(".navbar-fixed-top").addClass("bg-nav");
-        $(".menu>li>a").css("color","#444");
-        $("a.active").css("color","#4879bc");
-    } else {
-        $(".navbar-fixed-top").removeClass("bg-nav");
-        $(".menu>li>a").css("color","#fff");
-    }
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 80) {
-            $(".navbar-fixed-top").addClass("bg-nav");
-            $(".menu>li>a").css("color","#444");
-            $("a.active").css("color","#4879bc");
-        } else {
-            $(".navbar-fixed-top").removeClass("bg-nav");
-            $(".menu>li>a").css("color","#fff");
-        }
-    });
-
-
-
-
+ 
     // Parallax
     var parallax = function () {
         $(window).stellar();
@@ -95,13 +71,13 @@ $(document).ready(function () {
 
     //  isotope
     $('#projects').waitForImages(function () {
-        var $container = $('.portfolio_container');
+        var $container = $('.pictorial_container');
         $container.isotope({
             filter: '*',
         });
 
-        $('.portfolio_filter a').click(function () {
-            $('.portfolio_filter .active').removeClass('active');
+        $('.pictorial_filter a').click(function () {
+            $('.pictorial_filter .active').removeClass('active');
             $(this).addClass('active');
 
             var selector = $(this).attr('data-filter');
@@ -348,6 +324,7 @@ $(function () {
             $('.vp-01_cap').stop().animate({
                 left: '90'
             }, 1000);
+            $('.vp-01_power').stop().css('background','greenyellow').css('transition','all 0.2s ease');
             setTimeout(function() {
                 $('.vp-01_spindle').stop().css('animation-play-state','running');
             }, 500);
@@ -361,8 +338,10 @@ $(function () {
                 left: '0'
             }, 1000);
             $('.vp-01_spindle').stop().css('animation-play-state','paused');
+            $('.vp-01_power').stop().css('background','#333').css('transition','all 0.2s ease');
         }
         switchCount++;
+
     });
 
     $('.vp-01_play').mouseover(function () {
@@ -431,7 +410,7 @@ album9.addEventListener('click', function () {
 
 
 function playAudio () {
-    audioContainer.volume = 0.5;
+    audioContainer.volume = 1;
     audioContainer.play();
 }
 
@@ -444,7 +423,6 @@ function loadAudio () {
     source.src = `audio/${currentAudio}.mp3`;
     audioContainer.load();
     playAudio();
-    console.log(source.src);
 }
 
 let playCount = 0;
@@ -458,3 +436,14 @@ playBtn.addEventListener('click', function () {
     playCount++;
     console.log(playCount);
 });
+
+
+
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
