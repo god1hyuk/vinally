@@ -40,6 +40,22 @@ h4:before {
     top: 9px;
 }
 
+h5 {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+h5 > span {
+    text-transform: none;
+    padding-left: 15px;
+    color: #000;
+    font-weight: 400;
+}
+
 
 /* General
 ==================================================*/
@@ -48,6 +64,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 24px;
+    scroll-behavior: smooth;
 }
 
 .size-50 {
