@@ -109,7 +109,7 @@ a.active {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #fff;
+    background: #f3f3f3;
 }
 #mobile_menu > li > a {
     color: #000;
