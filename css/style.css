@@ -483,6 +483,9 @@ footer {
     filter: grayscale(100%);
     z-index: 2;
 }
+.vinyl-cover:focus {
+    outline: none;
+}
 
 .vinyl-cover:hover {
     cursor: pointer;
