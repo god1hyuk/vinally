@@ -14,9 +14,9 @@ $(window).scroll(function () {
 
 // mobile
 
+let mobile_count = 0;
+
 if (window.matchMedia("(max-width: 375px)").matches === true) {
-    // $("header").css("display", "none");
-    // $("#mobile").css("display", "block");
     $('#mobile_btn').click(function () {
         if (mobile_count % 2 === 0) {
             $(this).children('i').removeClass('fa-bars').addClass('fa-times');
