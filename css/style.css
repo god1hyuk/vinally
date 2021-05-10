@@ -483,8 +483,9 @@ footer {
     filter: grayscale(100%);
     z-index: 2;
 }
-.vp-01_slider:focus {
-    outline: none;
+
+.vp-01_slider a {
+    text-decoration: none;
 }
 
 .vinyl-cover:hover {
