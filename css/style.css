@@ -465,7 +465,7 @@ footer {
     align-items: center;
     margin-top: 50px;
 }
-.slick-slider > div {
+.slcik-slide {
     -webkit-tap-highlight-color:transparent;
 }
 .slick-arrow {
