@@ -465,9 +465,6 @@ footer {
     align-items: center;
     margin-top: 50px;
 }
-.slcik-slide {
-    -webkit-tap-highlight-color:transparent;
-}
 .slick-arrow {
     margin: 0 5px;
     font-size: 6rem;
@@ -484,6 +481,7 @@ footer {
     width: 90%;
     margin: 0 auto;
     filter: grayscale(100%);
+    border: none;
     z-index: 2;
 }
 
