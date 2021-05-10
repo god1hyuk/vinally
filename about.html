@@ -12,6 +12,7 @@
     <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <!-- main style -->
     <link href="css/style.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -43,7 +44,7 @@
                     <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#" class="active">About</a>
                 </li>
                 <li>
                     <a href="vp-01.html">VP-01</a>
@@ -59,6 +60,34 @@
 
     </header>
     <!-- ./header -->
+
+    <!-- mobile menu -->
+    <div id="mobile" class="navbar-fixed-top">
+        <nav>
+            <button type="button" id="mobile_btn" class="btn" data-toggle="collapse" data-target="#mobile_menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="clearfix"></div>
+            <ul id="mobile_menu" class="collapse">
+                <li class="text-center">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="text-center">
+                    <a href="about.html" class="active">About</a>
+                </li>
+                <li class="text-center">
+                    <a href="vp-01.html">VP-01</a>
+                </li>
+                <li class="text-center">
+                    <a href="subscribe.html">Subscribe</a>
+                </li>
+                <li class="text-center">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- ./mobile menu -->
 
     <!-- about -->
         <section id="about">
