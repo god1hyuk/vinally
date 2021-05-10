@@ -13,10 +13,6 @@ font-family: 'Open Sans', sans-serif;
 /* typography
 ==================================================*/
 
-li {
-    list-style: none;
-}
-
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 80px;
@@ -143,6 +139,21 @@ body {
     animation: wink 1s ease-in-out infinite alternate
 }
 
+@media only screen and (min-width:1200px) {
+    .preloader {
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+        margin-left: -30px
+    }
+    .preloader>.icon {
+        height: 50px;
+        width: 21.2px;
+        margin-top: -25px;
+        margin-left: -10.6px
+    }
+}
+
 @media only screen and (min-width:768px) {
     .preloader {
         height: 60px;
@@ -163,18 +174,10 @@ body {
     }
 }
 
-@media only screen and (min-width:1200px) {
-    .preloader {
-        height: 60px;
-        width: 60px;
-        margin-top: -30px;
-        margin-left: -30px
-    }
-    .preloader>.icon {
-        height: 50px;
-        width: 21.2px;
-        margin-top: -25px;
-        margin-left: -10.6px
+@media (max-width: 375px) {
+    h5 > span {
+        display: block;
+        padding-left: 0px;
     }
 }
 
