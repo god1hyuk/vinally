@@ -465,6 +465,9 @@ footer {
     align-items: center;
     margin-top: 50px;
 }
+.slick-slider > div {
+    -webkit-tap-highlight-color:transparent;
+}
 .slick-arrow {
     margin: 0 5px;
     font-size: 6rem;
@@ -481,12 +484,7 @@ footer {
     width: 90%;
     margin: 0 auto;
     filter: grayscale(100%);
-    -webkit-tap-highlight-color:transparent;
     z-index: 2;
-}
-
-.vp-01_slider a {
-    text-decoration: none;
 }
 
 .vinyl-cover:hover {
