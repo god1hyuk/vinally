@@ -481,6 +481,7 @@ footer {
     width: 90%;
     margin: 0 auto;
     filter: grayscale(100%);
+    text-decoration: none;
     z-index: 2;
 }
 
