@@ -481,7 +481,6 @@ footer {
     width: 90%;
     margin: 0 auto;
     filter: grayscale(100%);
-    border: none;
     z-index: 2;
 }
 
@@ -528,9 +527,8 @@ footer {
 
 @keyframes spindle {
     from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+    to {transform: rotate(-360deg);}
 }
-
 .vp-01_shadow {
     position: absolute;
     width: 100%;
