@@ -70,7 +70,7 @@ $(document).ready(function () {
     });
 
     //  isotope
-    $('#projects').waitForImages(function () {
+    $('#gallery').waitForImages(function () {
         var $container = $('.pictorial_container');
         $container.isotope({
             filter: '*',
@@ -162,14 +162,7 @@ $(document).ready(function () {
 
 // vp-01 animation
 
-
 // vp-01 slider
-
-// $('.vp-01_slider').slick({
-//     infinite: true,
-//     slidesToShow: 3,
-//     slidesToScroll: 3
-//   });
 
   $('.vp-01_slider').slick({
     infinite: true,
@@ -318,12 +311,8 @@ $(function () {
         if (switchCount % 2 === 0) {
             $(this).text('STOP');
             $('.vp-01_wrap').stop().css('filter','grayscale(0%)').css('transition','filter 0.2s ease');
-            $('.vp-01_switch').stop().animate({
-                top: '-45'
-            }, 1000);
-            $('.vp-01_cap').stop().animate({
-                left: '90'
-            }, 1000);
+            $('.vp-01_switch').stop().animate({ top: '-45' }, 1000);
+            $('.vp-01_cap').stop().animate({ left: '90' }, 1000);
             $('.vp-01_power').stop().css('background','greenyellow').css('transition','all 0.2s ease');
             setTimeout(function() {
                 $('.vp-01_spindle').stop().css('animation-play-state','running');
@@ -341,7 +330,6 @@ $(function () {
             $('.vp-01_power').stop().css('background','#333').css('transition','all 0.2s ease');
         }
         switchCount++;
-
     });
 
     $('.vp-01_play').mouseover(function () {

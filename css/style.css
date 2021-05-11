@@ -491,7 +491,7 @@ footer {
 .vp-01_wrap {
     position: relative;
     width: 300px;
-    height: 480px;
+    height: 450px;
     margin: 0 auto;
     overflow: hidden;
     filter: grayscale(100%);
@@ -517,7 +517,7 @@ footer {
 
 .vp-01_spindle {
     position: absolute;
-    top: 200px;
+    top: 160px;
     right: 0;
     width: 220px;
     z-index: 2;

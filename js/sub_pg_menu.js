@@ -19,9 +19,9 @@ let mobile_count = 0;
 if (window.matchMedia("(max-width: 375px)").matches === true) {
     $('#mobile_btn').click(function () {
         if (mobile_count % 2 === 0) {
-            $(this).children('i').removeClass('fa-bars').addClass('fa-times');
+            $(this).children('i').removeClass('fa-bars').addClass('ion-close-round');
         } else {
-            $(this).children('i').removeClass('fa-times').addClass('fa-bars');
+            $(this).children('i').removeClass('ion-close-round').addClass('fa-bars');
         }
         mobile_count++;
     });
