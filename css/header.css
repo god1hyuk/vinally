@@ -114,3 +114,29 @@ a.active {
 #mobile_menu > li > a {
     color: #000;
 }
+
+/* Responsive media queries
+==================================================*/
+
+@media (max-width: 420px) {
+    nav li {
+        margin: 6px;
+    }
+    nav li a {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        display: none;
+    }
+    #mobile {
+        display: block;
+    }
+    .spin-txt {
+        /* left: 12%; */
+        width: 250px;
+        height: 250px;
+    }
+}

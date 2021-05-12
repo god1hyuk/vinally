@@ -4,7 +4,8 @@
 /* header css */
 @import url('../css/header.css');
 
-
+/* footer css */
+@import url('../css/footer.css');
 
 /* home section
 ==================================================*/
@@ -380,47 +381,6 @@
     line-height: 50px;
 }
 
-/* footer
-==================================================*/
-
-footer {
-    padding-top: 30px;
-    padding-bottom: 50px;
-    background: #f3f3f3;
-}
-.info_footer {
-    padding-top: 20px;
-}
-.logo_footer {
-    width: 50%;
-    margin: 30px auto;
-}
-.logo_black {
-    width: 100%;
-}
-
-.social {
-    padding-left: 0;
-    list-style: none;
-    margin-top: 20px;
-}
-
-.social li {
-    float: left;
-}
-
-.social li a {
-    color: #333;
-    font-size: 35px;
-    margin-right: 15px;
-    transition: all .3s;
-    -webkit-transition: all .3s;
-}
-
-.social li a:hover {
-    color: #4879bc;
-}
-
 /* About sub-page
 ===================================================*/
 
@@ -457,7 +417,6 @@ footer {
 
 #vp-01_experience {
     padding: 200px 0;
-    /* background: #f3f3f3; */
 }
 
 .slick-slider {
@@ -564,31 +523,106 @@ footer {
     z-index: 4;
 }
 
-
-@media (max-width: 375px) {
-    #vp-01 {
-        padding: 50px 0;
-    }
-    #vp-01_experience {
-        padding-top: 0;
-        padding-bottom: 100px;
-    }
-    .vp-01_slider {
-        margin-top: 20px;
-    }
-    .vp-01_wrap {
-        width: 250px;
-        height: 350px;
-        margin-top: 50px;
-    }
-    .vp-01_spindle {
-        top: 130px;
-        width: 185px;
-    }
-}
-
 /* ./vp-01 animation */
 
+/* subscribe sub-page
+==================================================*/
+
+#subscribe {
+    padding-top: 200px;
+    /* padding-bottom: 100px; */
+}
+
+.subscribe_img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* truck animation */
+.truck_wrap {
+    position: relative;
+    width: 100%;
+    height: 290px;
+    margin-top: 100px;
+}
+
+.truck {
+    position: absolute;
+    right: 10%;
+    width: 500px;
+    height: 100%;
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+.truck_body {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    animation: truck 1.5s linear infinite;
+}
+@keyframes truck {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(2px); }
+    100% { transform: translateY(0); }
+}
+.truck_wheel {
+    position: absolute;
+    bottom: 0;
+    width: 23%;
+    z-index: 3;
+    animation: wheel 1s linear infinite;
+}
+
+@keyframes wheel {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.wheel_back {
+    left: 8%;
+}
+.wheel_front {
+    right: 10%;
+}
+
+.truck_vinyl {
+    position: absolute;
+    bottom: 30%;
+    right: 38%;
+    width: 50px;
+}
+
+.t_vinyl_1 {
+    animation: t_vinyl 7s linear infinite;
+    animation-delay: 2s;
+}
+.t_vinyl_2 {
+    animation: t_vinyl 7s linear infinite;
+    animation-delay: 4s;
+}
+.t_vinyl_3 {
+    animation: t_vinyl 7s linear infinite;
+    animation-delay: 6s;
+}
+.t_vinyl_4 {
+    animation: t_vinyl 7s linear infinite;
+    animation-delay: 8s;
+}
+.t_vinyl_5 {
+    animation: t_vinyl 7s linear infinite;
+    animation-delay: 10s;
+}
+@keyframes t_vinyl {
+    0% { bottom: 30%; right: 38%; }
+    10% { bottom: 30%; right: 44%; }
+    20% { bottom: 0%; right: 46%; }
+    30% { bottom: 8%; right: 50%; }
+    40% { bottom: 0%; right: 55%; }
+    50% { bottom: 6%; right: 60%; }
+    60% { bottom: 0; right: 65%; }
+    100% { bottom: 0%; right: 110%; }
+}
+/* ./truck animation */
 
 /* contact sub-page
 ==================================================*/
@@ -702,23 +736,182 @@ fieldset {
 /* Responsive media queries
 ==================================================*/
 
+@media (max-width: 1366px) {
+    .spin-txt {
+        width: 480px;
+        height: 480px;
+        top: 45px;
+        left: 20%;
+    }
+    /* truck animation */
+    .truck_wrap {
+        height: 230px;
+    }
+    .truck {
+        right: 10%;
+        width: 400px;
+    }
+    .truck_vinyl {
+        right: 32%;
+        width: 45px;
+    }
+    @keyframes t_vinyl {
+        0% { bottom: 30%; right: 32%; }
+        10% { bottom: 30%; right: 40%; }
+        20% { bottom: 0%; right: 44%; }
+        30% { bottom: 8%; right: 50%; }
+        40% { bottom: 0%; right: 55%; }
+        50% { bottom: 6%; right: 60%; }
+        60% { bottom: 0; right: 65%; }
+        100% { bottom: 0%; right: 110%; }
+    }
+    /* ./truck animation */
+}
+
+@media (max-width: 1024px) {
+    .spin-txt {
+        width: 450px;
+        height: 450px;
+        top: 100px;
+        left: 5%;
+    }
+
+    /* truck animation */
+
+    .truck_vinyl {
+        right: 40%;
+    }
+    @keyframes t_vinyl {
+        0% { bottom: 30%; right: 40%; }
+        10% { bottom: 30%; right: 48%; }
+        20% { bottom: 0%; right: 53%; }
+        30% { bottom: 8%; right: 58%; }
+        40% { bottom: 0%; right: 62%; }
+        50% { bottom: 6%; right: 67%; }
+        60% { bottom: 0; right: 72%; }
+        100% { bottom: 0%; right: 110%; }
+    }
+    /* ./truck animation */
+}
+
 @media (max-width: 991px) {
     .pictorial .categories-grid .categories ul li a {
         padding: 0 2px;
+    }   
+}
+
+@media (max-width: 812px) {
+    .spin-txt {
+        width: 430px;
+        height: 430px;
+        top: 120px;
+        left: 40%;
+    }
+
+    #vp-01_experience {
+        padding-top: 0;
+        padding-bottom: 100px;
+    }
+    .vp-01_wrap {
+        width: 400px;
+        height: 560px;
+        margin-top: 100px;
+    }
+    .vp-01_spindle {
+        top: 200px;
+        width: 280px;
+    }
+
+    .truck_wrap {
+        height: 200px;
+    }
+    .truck {
+        right: 10%;
+        width: 350px;
+    }
+    .truck_vinyl {
+        right: 45%;
+        width: 35px;
+    }
+    @keyframes t_vinyl {
+        0% { bottom: 30%; right: 45%; }
+        10% { bottom: 30%; right: 50%; }
+        20% { bottom: 0%; right: 55%; }
+        30% { bottom: 8%; right: 60%; }
+        40% { bottom: 0%; right: 65%; }
+        50% { bottom: 6%; right: 70%; }
+        60% { bottom: 0; right: 75%; }
+        100% { bottom: 0%; right: 110%; }
     }
 }
 
 @media (max-width: 768px) {
     .spin-txt {
-        top: 150px;
-        width: 350px;
-        height: 350px;
+        top: 100px;
+        left: 38%;
     }
     .timeline-event-copy {
         width: 90%;
         left: 2em;
     }
+
+    /* #vp-01_experience {
+        padding-top: 0;
+        padding-bottom: 100px;
+    }
+    .vp-01_wrap {
+        width: 400px;
+        height: 560px;
+        margin-top: 100px;
+    }
+    .vp-01_spindle {
+        top: 200px;
+        width: 280px;
+    } */
+
+    .truck_wrap {
+        height: 170px;
+    }
+    .truck {
+        right: 10%;
+        width: 300px;
+    }
+    .truck_vinyl {
+        right: 50%;
+        width: 35px;
+    }
 }
+
+@media (max-width: 540px) {
+    .spin-txt {
+        top: 120px;
+        left: 20%;
+        width: 400px;
+    }
+
+    .truck_wrap {
+        height: 150px;
+    }
+    .truck {
+        right: 10%;
+        width: 260px;
+    }
+    .truck_vinyl {
+        right: 50%;
+        width: 30px;
+    }
+    @keyframes t_vinyl {
+        0% { bottom: 30%; right: 50%; }
+        10% { bottom: 30%; right: 55%; }
+        20% { bottom: 0%; right: 60%; }
+        30% { bottom: 8%; right: 65%; }
+        40% { bottom: 0%; right: 70%; }
+        50% { bottom: 6%; right: 75%; }
+        60% { bottom: 0; right: 80%; }
+        100% { bottom: 0%; right: 110%; }
+    }
+}
+
 
 @media (max-width: 500px) {
     h1 {
@@ -736,28 +929,57 @@ fieldset {
     }
 }
 
-@media (max-width: 420px) {
-    nav li {
-        margin: 6px;
-    }
-    nav li a {
-        font-size: 10px;
-    }
-}
-
 @media (max-width: 375px) {
-    header {
-        display: none;
-    }
-    #mobile {
-        display: block;
-    }
     .spin-txt {
-        /* left: 12%; */
+        top: 120px;
+        left: 5%;
+        width: 300px;
+        height: 300px;
+    }
+
+    #vp-01 {
+        padding: 50px 0;
+    }
+    #vp-01_experience {
+        padding-top: 0;
+        padding-bottom: 100px;
+    }
+    .vp-01_slider {
+        margin-top: 20px;
+    }
+    .vp-01_wrap {
         width: 250px;
-        height: 250px;
+        height: 350px;
+        margin-top: 50px;
     }
-    footer .menu {
-        display: none;
+    .vp-01_spindle {
+        top: 130px;
+        width: 185px;
     }
+
+    #subscribe {
+        padding-top: 100px;
+    }
+    .truck_wrap {
+        height: 115px;
+    }
+    .truck {
+        right: 10%;
+        width: 200px;
+    }
+    .truck_vinyl {
+        right: 55%;
+        width: 20px;
+    }
+    @keyframes t_vinyl {
+        0% { bottom: 30%; right: 55%; }
+        10% { bottom: 30%; right: 60%; }
+        20% { bottom: 0%; right: 65%; }
+        30% { bottom: 8%; right: 70%; }
+        40% { bottom: 0%; right: 75%; }
+        50% { bottom: 6%; right: 80%; }
+        60% { bottom: 0; right: 85%; }
+        100% { bottom: 0%; right: 110%; }
+    }
+
 }

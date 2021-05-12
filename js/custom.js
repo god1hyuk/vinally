@@ -425,8 +425,6 @@ playBtn.addEventListener('click', function () {
     console.log(playCount);
 });
 
-
-
 function myFunction() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
